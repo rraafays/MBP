@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 let
   STATE_VERSION = "24.11";
@@ -30,14 +30,15 @@ in
     ./modules/fonts
     ./modules/home
     ./modules/neovim
+    ./modules/aerospace
   ];
 
   networking.hostName = "MBP";
   programs.fish = {
     enable = true;
-    shellInit = ''set -x LIBRARY_PATH (string join ' ' $LIBRARY_PATH ${
-      lib.makeLibraryPath [ pkgs.libiconv ]
-    })'';
+    shellInit = ''
+      set -x LIBRARY_PATH $LIBRARY_PATH ${pkgs.libiconv}/lib
+    '';
   };
   environment = {
     darwinConfig = "/etc/nix-darwin/configuration.nix";
@@ -50,7 +51,7 @@ in
       name = USER;
       home = "/Users/${USER}";
       shell = pkgs.fish;
-      uid = 502;
+      uid = 501;
     };
   };
 
