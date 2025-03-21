@@ -34,16 +34,6 @@ in
   ];
 
   networking.hostName = "MBP";
-  programs.fish = {
-    enable = true;
-    shellInit = ''
-      set -x LIBRARY_PATH $LIBRARY_PATH ${pkgs.libiconv}/lib
-    '';
-  };
-  environment = {
-    darwinConfig = "/etc/nix-darwin/configuration.nix";
-    shells = [ pkgs.fish ];
-  };
 
   users = {
     knownUsers = [ USER ];
