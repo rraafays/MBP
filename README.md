@@ -22,6 +22,7 @@ git clone --recurse-submodules https://github.com/rraafays/MBP ~/MBP
 ### 2. link to `/etc`
 
 ```bash
+sudo mkdir -p /etc/nix-darwin/
 sudo ln -s ~/MBP /etc/nix-darwin/MBP
 ```
 
