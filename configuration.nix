@@ -1,17 +1,21 @@
 { pkgs, ... }:
 
 let
-  STATE_VERSION = "25.05";
   USER = "raf";
   DARWIN_STATE_VERSION = 5;
 in
 {
+  networking.hostName = "MBP";
+
   nixpkgs = {
     hostPlatform = "aarch64-darwin";
     config.allowUnfree = true;
   };
 
-  networking.hostName = "MBP";
+  system = {
+    stateVersion = DARWIN_STATE_VERSION;
+    primaryUser = USER;
+  };
 
   programs.fish.enable = true;
   users = {
@@ -21,11 +25,19 @@ in
       home = "/Users/${USER}";
       shell = pkgs.fish;
       uid = 501;
+      packages = with pkgs; [
+        adbfs-rootless
+        android-tools
+        bandwhich
+        hyperfine
+        mpv
+        sacad
+        spotdl
+        sptlrx
+        substudy
+        yt-dlp-light
+        zathura
+      ];
     };
-  };
-
-  system = {
-    stateVersion = DARWIN_STATE_VERSION;
-    primaryUser = USER;
   };
 }

@@ -11,7 +11,16 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }: {
     darwinConfigurations."MBP" = nix-darwin.lib.darwinSystem {
-      modules = [ ./configuration.nix ];
+      modules = [
+        ./configuration.nix
+        ./src/aerospace.nix
+        ./src/brew.nix
+        ./src/darwin.nix
+        ./src/environment.nix
+        ./src/fonts.nix
+        ./src/neovim.nix
+        ./src/toolset.nix
+      ];
     };
   };
 }
