@@ -47,19 +47,6 @@ in
 
   system = {
     stateVersion = DARWIN_STATE_VERSION;
-    activationScripts = {
-      postUserActivation.text = ''
-        /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-      '';
-      dotfiles.text = ''
-        if [ -L /root/.config ]; then
-            rm /root/.config
-        elif [ -d /root/.config ]; then
-            rm -rf /root/.config
-        fi
-        ln -s /home/${USER}/.config /root/.config
-        chown -R ${USER} /home/${USER}/.config
-      '';
-    };
+    primaryUser = USER;
   };
 }
