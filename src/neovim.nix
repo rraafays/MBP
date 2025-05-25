@@ -9,7 +9,7 @@
     luarocks
     php84Packages.composer
     julia-bin
-    nodejs-slim
+    nodejs
     python3Minimal
     leiningen
     python3Packages.pip
