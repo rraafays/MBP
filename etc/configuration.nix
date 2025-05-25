@@ -1,5 +1,0 @@
-{ ... }:
-
-{
-  imports = [ ./MBP/configuration.nix ];
-}
