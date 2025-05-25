@@ -19,25 +19,36 @@ in
 
   programs.fish.enable = true;
   users = {
-    knownUsers = [ USER ];
-    users.${USER} = {
-      name = USER;
-      home = "/Users/${USER}";
-      shell = pkgs.fish;
-      uid = 501;
-      packages = with pkgs; [
-        adbfs-rootless
-        android-tools
-        bandwhich
-        hyperfine
-        mpv
-        sacad
-        spotdl
-        sptlrx
-        substudy
-        yt-dlp-light
-        zathura
-      ];
+    knownUsers = [ USER "root" ];
+    users = {
+      root = {
+        shell = pkgs.fish;
+        uid = 0;
+      };
+
+      ${USER} = {
+        name = USER;
+        home = "/Users/${USER}";
+        shell = pkgs.fish;
+        uid = 501;
+        packages = with pkgs; [
+          (writeShellScriptBin "su" ''
+            #!${stdenv.shell}
+            /usr/bin/sudo /usr/bin/su "$@"
+          '')
+          adbfs-rootless
+          android-tools
+          bandwhich
+          hyperfine
+          mpv
+          sacad
+          spotdl
+          sptlrx
+          substudy
+          yt-dlp-light
+          zathura
+        ];
+      };
     };
   };
 }
