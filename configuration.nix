@@ -5,6 +5,15 @@ let
   DARWIN_STATE_VERSION = 5;
 in
 {
+  imports = [
+    ./modules/aerospace
+    ./modules/darwin
+    ./modules/brew
+    ./modules/environment
+    ./modules/fonts
+    ./modules/neovim
+  ];
+
   networking.hostName = "MBP";
 
   nixpkgs = {
@@ -25,7 +34,6 @@ in
         shell = pkgs.fish;
         uid = 0;
       };
-
       ${USER} = {
         name = USER;
         home = "/Users/${USER}";
