@@ -48,6 +48,7 @@ in
           android-tools
           bandwhich
           hyperfine
+          kitty
           mpv
           sacad
           spotdl
