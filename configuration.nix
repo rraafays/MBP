@@ -7,8 +7,8 @@ in
 {
   imports = [
     ./modules/aerospace
-    ./modules/darwin
     ./modules/brew
+    ./modules/darwin
     ./modules/environment
     ./modules/fonts
     ./modules/neovim
@@ -28,7 +28,10 @@ in
 
   programs.fish.enable = true;
   users = {
-    knownUsers = [ USER "root" ];
+    knownUsers = [
+      USER
+      "root"
+    ];
     users = {
       root = {
         shell = pkgs.fish;
