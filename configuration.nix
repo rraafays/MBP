@@ -63,4 +63,23 @@ in
       };
     };
   };
+
+  homebrew = {
+    enable = true;
+    onActivation.upgrade = true;
+    casks = [
+      "android-file-transfer"
+      "darktable"
+      "kid3"
+      "makemkv"
+      "musicbrainz-picard"
+      "playcover-community"
+      "qobuz-downloader"
+      "soulseek"
+      "spotify"
+      "transmission"
+      "wechat"
+      "whatsapp"
+    ];
+  };
 }
