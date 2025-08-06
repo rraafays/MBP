@@ -52,7 +52,6 @@ in
           bandwhich
           hyperfine
           kitty
-          mpv
           sacad
           spotdl
           sptlrx
