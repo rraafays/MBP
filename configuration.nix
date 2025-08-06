@@ -70,6 +70,7 @@ in
     casks = [
       "android-file-transfer"
       "darktable"
+      "handbrake"
       "kid3"
       "makemkv"
       "musicbrainz-picard"
