@@ -75,9 +75,11 @@ in
       "musicbrainz-picard"
       "playcover-community"
       "qobuz-downloader"
+      "rawtherapee"
       "soulseek"
       "spotify"
       "transmission"
+      "tuta-mail"
       "wechat"
       "whatsapp"
     ];
