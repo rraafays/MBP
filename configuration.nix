@@ -76,6 +76,7 @@ in
       "playcover-community"
       "qobuz-downloader"
       "rawtherapee"
+      "rockboxutility"
       "soulseek"
       "spotify"
       "transmission"
