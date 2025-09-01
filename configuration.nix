@@ -80,7 +80,6 @@ in
       "soulseek"
       "spotify"
       "transmission"
-      "tuta-mail"
       "wechat"
       "whatsapp"
     ];
