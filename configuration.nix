@@ -69,6 +69,7 @@ in
     casks = [
       "android-file-transfer"
       "darktable"
+      "gog-galaxy"
       "handbrake-app"
       "kid3"
       "makemkv"
