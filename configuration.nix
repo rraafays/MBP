@@ -11,7 +11,6 @@ in
     ./modules/darwin
     ./modules/environment
     ./modules/fonts
-    ./modules/neovim
   ];
 
   networking.hostName = "MBP";
