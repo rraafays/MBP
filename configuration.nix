@@ -6,11 +6,11 @@ let
 in
 {
   imports = [
-    ./modules/aerospace
-    ./modules/brew
-    ./modules/darwin
-    ./modules/environment
-    ./modules/fonts
+    ./src/aerospace.nix
+    ./src/brew.nix
+    ./src/system.nix
+    ./src/environment.nix
+    ./src/fonts.nix
   ];
 
   networking.hostName = "MBP";
