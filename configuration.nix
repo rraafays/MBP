@@ -42,15 +42,10 @@ in
         shell = pkgs.fish;
         uid = 501;
         packages = with pkgs; [
-          (writeShellScriptBin "su" ''
-            #!${stdenv.shell}
-            /usr/bin/sudo /usr/bin/su "$@"
-          '')
           adbfs-rootless
           android-tools
           bandwhich
           hyperfine
-          kitty
           sacad
           spotdl
           sptlrx
