@@ -70,7 +70,6 @@ in
       "qobuz-downloader"
       "rockboxutility"
       "soulseek"
-      "spotify"
       "transmission"
       "wechat"
       "whatsapp"
